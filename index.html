@@ -134,13 +134,13 @@ nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opac
 /* FOOTER */
 footer { background:#000; padding:64px 40px 40px; }
 .footer-inner { max-width:1400px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:28px; text-align:center; }
-.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 36px; }
+.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 36px; position:static; order:1; }
 .footer-links a { font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#fff; text-decoration:none; transition:opacity .2s; }
 .footer-links a:hover { opacity:0.6; }
-.footer-social { display:flex; align-items:center; gap:14px; }
+.footer-social { display:flex; align-items:center; gap:14px; position:static; float:none; order:2; margin:0; }
 .footer-social a { width:34px; height:34px; border-radius:50%; background:#fff; color:#000; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:opacity .2s; }
 .footer-social a:hover { opacity:0.75; }
-.footer-legal-text { display:flex; flex-direction:column; gap:6px; max-width:640px; }
+.footer-legal-text { display:flex; flex-direction:column; gap:6px; max-width:640px; position:static; order:3; }
 .footer-legal-text p { font-family:'DM Sans',sans-serif; font-size:0.72rem; line-height:1.6; color:rgba(255,255,255,0.4); margin:0; }
 .footer-legal-text a { color:rgba(255,255,255,0.4); text-decoration:underline; text-underline-offset:2px; transition:color .2s; }
 .footer-legal-text a:hover { color:#fff; }
