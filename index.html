@@ -67,7 +67,20 @@ nav.scrolled .member-login-link { background:#fff; color:#000; border-color:#fff
 nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opacity:0.85; }
 
 /* HERO */
-.hero { position:relative; width:100vw; height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:0 40px 52px; overflow:hidden; }
+.hero { 
+  position: relative; 
+  width: 100vw; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  /* Center the content vertically and horizontally */
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 0 40px; 
+  overflow: hidden; 
+}
+
 .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 55% at 50% 40%, rgba(128,128,128,0.04) 0%, transparent 70%); pointer-events:none; z-index:0; }
 .hero-bg { position:absolute; inset:0; z-index:0; background:var(--bg); overflow:hidden; }
 .hero-video {
@@ -76,24 +89,46 @@ nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opac
   object-fit:cover;
   display:block;
 }
-/* dark overlay so text reads over grid */
+
 .hero-bg::after {
   content:'';
   position:absolute; inset:0;
+  /* Softened the gradient slightly for a more centered focus */
   background:linear-gradient(
     to top,
     var(--bg) 0%,
-    rgba(0,0,0,0.55) 40%,
+    rgba(0,0,0,0.4) 50%,
     rgba(0,0,0,0.3) 100%
   );
   z-index:1;
   pointer-events:none;
 }
-.hero-text { position:relative; z-index:2; }
-.hero-line1 { font-size:clamp(2.8rem,5.5vw,5.5rem); font-weight:400; line-height:1.05; letter-spacing:-0.02em; color:var(--text); animation:fadeSlideUp .9s .1s both; }
-.hero-line2 { font-size:clamp(2.8rem,5.5vw,5.5rem); font-weight:300; line-height:1.05; letter-spacing:-0.02em; color:var(--text-muted); animation:fadeSlideUp .9s .25s both; }
-@keyframes fadeSlideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
 
+.hero-text { position:relative; z-index:2; }
+
+.hero-line1 { 
+  /* Smaller, more elegant size with uppercase and wide tracking */
+  font-size: clamp(2rem, 4vw, 3.5rem); 
+  font-weight: 300; 
+  line-height: 1.1; 
+  letter-spacing: 0.1em; 
+  text-transform: uppercase;
+  color: var(--text); 
+  margin-bottom: 16px;
+  animation: fadeSlideUp .9s .1s both; 
+}
+
+.hero-line2 { 
+  /* Significantly smaller subtitle size */
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem); 
+  font-weight: 300; 
+  letter-spacing: 0.18em; 
+  text-transform: uppercase;
+  color: var(--text-muted); 
+  animation: fadeSlideUp .9s .25s both; 
+}
+
+@keyframes fadeSlideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
 /* ABOUT */
 .reel { background:var(--bg); border-top:1px solid var(--border); }
 .reel-inner { max-width:1400px; margin:0 auto; padding:100px 40px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
