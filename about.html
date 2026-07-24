@@ -31,11 +31,11 @@ nav {
 }
 .member-login-link:hover { opacity: 0.85; }
 
-/* ABOUT HERO */
+/* ABOUT HERO (FIRST THING ON PAGE) */
 .about-hero {
   position: relative;
   width: 100vw;
-  padding: 160px 40px 50px;
+  padding: 160px 40px 60px;
   background: var(--bg);
   text-align: center;
 }
@@ -62,35 +62,10 @@ nav {
   color: var(--text-muted);
 }
 
-/* VIDEO SECTION (PROMINENTLY PLACED NEAR TOP) */
-.video-section {
-  background: var(--bg);
-  padding: 20px 40px 80px;
-}
-
-.video-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #000;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
 /* EDITORIAL NARRATIVE SECTION (NO SUBCATEGORIES) */
 .about-narrative-section {
   background: var(--bg);
-  padding: 0 40px 100px;
+  padding: 0 40px 80px;
 }
 
 .narrative-inner {
@@ -110,6 +85,31 @@ nav {
   font-size: 1.2rem;
   color: var(--text);
   margin-bottom: 40px;
+}
+
+/* VIDEO SECTION (PLACED FURTHER DOWN) */
+.video-section {
+  background: var(--bg);
+  padding: 0 40px 100px;
+}
+
+.video-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 /* DOCUMENT DOWNLOAD BUTTONS */
@@ -268,8 +268,8 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
 @media (max-width: 640px) {
   .member-login-link { display: none; }
   .about-hero { padding: 120px 20px 30px; }
-  .video-section { padding: 10px 20px 50px; }
-  .about-narrative-section { padding: 0 20px 60px; }
+  .about-narrative-section { padding: 0 20px 40px; }
+  .video-section { padding: 0 20px 60px; }
   .documents-section { padding: 0 20px 60px; }
   .about-benefits { padding: 0 20px 80px; }
   .benefits-inner { padding-top: 60px; }
@@ -304,19 +304,13 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
   <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="mob-drawer-link">Member Login</a>
 </div>
 
+<!-- HERO SECTION (FIRST ON PAGE) -->
 <section class="about-hero">
   <div class="about-hero-content">
     <h1 class="about-heading">About The Club</h1>
     <p class="about-lead">
       Embrace the Lamborghini essence with the UK Club, uniting enthusiasts in celebration of an iconic legacy.
     </p>
-  </div>
-</section>
-
-<!-- VIDEO SECTION (PLACED FIRST) -->
-<section class="video-section">
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/Pwxrh19XjWU" title="Lamborghini Club UK - Why You Should Join" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -332,6 +326,13 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
     <p class="narrative-text">
       While there has been a club over many years in various forms, our current iteration was officially formed in May 1987. The club operates through a limited company, hosting an Annual General Meeting and filing annual audited accounts with Companies House.
     </p>
+  </div>
+</section>
+
+<!-- VIDEO SECTION (PLACED FURTHER DOWN) -->
+<section class="video-section">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/Pwxrh19XjWU" title="Lamborghini Club UK - Why You Should Join" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
 
