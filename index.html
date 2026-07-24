@@ -126,6 +126,24 @@ nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opac
 
 @media (max-width:900px) { .do-panel { grid-template-columns:1fr; gap:40px; } }
 
+/* PARTNERS MARQUEE */
+.brands-strip { background:var(--bg); padding:72px 0; border-top:1px solid var(--border); }
+.brands-label { text-align:center; font-size:0.58rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--text-faint); margin-bottom:40px; }
+.brands-track { overflow:hidden; }
+.brands-inner { display:flex; align-items:center; width:max-content; animation:bq-forward 38s linear infinite; }
+.brands-inner:hover { animation-play-state:paused; }
+.brand-logo { display:flex; align-items:center; padding:0 56px; }
+.brand-logo img {
+  height:64px;
+  width:auto;
+  display:block;
+  opacity:0.35;
+  filter:grayscale(1);
+  transition:opacity .3s, filter .3s;
+}
+.brand-logo img:hover { opacity:0.85; filter:grayscale(0); }
+@keyframes bq-forward { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
 /* FOOTER */
 footer { background:#000; padding:64px 40px 40px; }
 .footer-inner { max-width:1400px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:28px; text-align:center; }
@@ -170,6 +188,11 @@ footer { background:#000; padding:64px 40px 40px; }
   .do-desc { font-size: 0.88rem; margin-bottom: 24px; }
   .do-grid { grid-template-columns: 1fr; }
   .do-item { padding: 24px 20px; }
+
+  /* PARTNERS */
+  .brands-strip { padding: 48px 0; }
+  .brand-logo { padding: 0 32px; }
+  .brand-logo img { height: 44px; }
 
   /* FOOTER */
   footer { padding: 48px 20px 32px; }
@@ -258,6 +281,27 @@ footer { background:#000; padding:64px 40px 40px; }
         <div class="do-item-title">Member Support</div>
         <div class="do-item-desc">A dedicated team, whenever you need it.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="brands-strip js-reveal">
+  <div class="brands-label">Our Partners</div>
+  <div class="brands-track">
+    <div class="brands-inner">
+      <!-- set 1 -->
+      <div class="brand-logo"><img src="logos/logo-1.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-2.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-3.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-4.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-5.png" alt="Partner logo"></div>
+      <!-- set 2 — duplicate for seamless loop -->
+      <div class="brand-logo"><img src="logos/logo-1.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-2.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-3.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-4.png" alt="Partner logo"></div>
+      <div class="brand-logo"><img src="logos/logo-5.png" alt="Partner logo"></div>
     </div>
   </div>
 </section>
