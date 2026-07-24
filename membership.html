@@ -35,18 +35,18 @@ nav {
 .membership-page { 
   position: relative; 
   width: 100vw; 
-  min-height: 100vh; 
+  min-height: 80vh; 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
   text-align: center;
-  padding: 140px 40px 100px; 
+  padding: 140px 40px 80px; 
   background: var(--bg);
 }
 
 .membership-content {
-  max-width: 580px; /* Keeps text narrow and elegant like the reference image */
+  max-width: 580px; 
   margin: 0 auto;
 }
 
@@ -89,6 +89,7 @@ nav {
   background: transparent;
   color: #fff;
 }
+
 /* MEMBERSHIP BENEFITS */
 .membership-benefits {
   background: var(--bg);
@@ -161,18 +162,6 @@ nav {
   background: var(--text-faint);
 }
 
-/* MOBILE ADJUSTMENTS FOR BENEFITS */
-@media (max-width: 900px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-@media (max-width: 640px) {
-  .membership-benefits { padding: 0 20px 80px; }
-  .benefits-inner { padding-top: 60px; }
-  .benefits-header { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 40px; }
-}
 /* FOOTER */
 footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--border); }
 .footer-inner { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
@@ -188,11 +177,20 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
 .footer-legal-text a:hover { color: #fff; }
 
 /* MOBILE OVERHAUL */
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 @media (max-width: 640px) {
   .member-login-link { display: none; }
-  .membership-page { padding: 120px 20px 80px; }
+  .membership-page { padding: 120px 20px 60px; }
   .membership-heading { font-size: clamp(1.8rem, 8vw, 2.4rem); margin-bottom: 32px; }
   .membership-text { font-size: 0.95rem; }
+  .membership-benefits { padding: 0 20px 80px; }
+  .benefits-inner { padding-top: 60px; }
+  .benefits-header { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 40px; }
   footer { padding: 48px 20px 32px; }
   .footer-links { gap: 14px 24px; }
 }
@@ -201,12 +199,12 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
 <body>
 
 <nav>
-  <a href="/" class="logo"><img src="lamborghiniclub-logo.png" alt="Lamborghini Club UK"></a>
+  <a href="index.html" class="logo"><img src="lamborghiniclub-logo.png" alt="Lamborghini Club UK"></a>
   <ul class="nav-links">
-    <li><a href="/membership">Membership</a></li>
-    <li><a href="/events">Events</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="membership.html">Membership</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-right">
     <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="member-login-link">Member Login</a>
@@ -215,10 +213,10 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
 </nav>
 
 <div class="mob-drawer">
-  <a href="/membership" class="mob-drawer-link">Membership</a>
-  <a href="/events" class="mob-drawer-link">Events</a>
-  <a href="/about" class="mob-drawer-link">About</a>
-  <a href="/contact" class="mob-drawer-link">Contact</a>
+  <a href="membership.html" class="mob-drawer-link">Membership</a>
+  <a href="events.html" class="mob-drawer-link">Events</a>
+  <a href="about.html" class="mob-drawer-link">About</a>
+  <a href="contact.html" class="mob-drawer-link">Contact</a>
   <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="mob-drawer-link">Member Login</a>
 </div>
 
@@ -237,7 +235,8 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
     <a href="https://crossmember.co.uk/add-member/?club=lcuk" class="apply-btn">Apply</a>
   </div>
 </section>
-  <section class="membership-benefits">
+
+<section class="membership-benefits">
   <div class="benefits-inner">
     <h2 class="benefits-header">Membership Privileges</h2>
     
@@ -286,13 +285,20 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
         </ul>
       </div>
     </div>
+
+    <!-- Bottom Join Button -->
+    <div style="text-align: center; margin-top: 80px;">
+      <a href="https://crossmember.co.uk/add-member/?club=lcuk" class="apply-btn">Join Now</a>
+    </div>
+
   </div>
 </section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-links">
-      <a href="/terms">Terms &amp; Conditions</a>
-      <a href="/privacy">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
     <div class="footer-social">
       <a href="https://www.instagram.com/lamboclubuk" target="_blank" rel="noopener" aria-label="Instagram">
