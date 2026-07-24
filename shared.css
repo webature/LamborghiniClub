@@ -19,75 +19,12 @@ html { scroll-behavior: smooth; }
   --card-bg: #0a0a0a;
   --card-hover: #111;
 }
-[data-theme="light"] {
-  --bg: #f5f3ef;
-  --bg2: #edeae5;
-  --surface: rgba(0,0,0,0.04);
-  --border: rgba(0,0,0,0.08);
-  --border-mid: rgba(0,0,0,0.15);
-  --text: #0d0d0d;
-  --text-muted: rgba(0,0,0,0.45);
-  --text-faint: rgba(0,0,0,0.28);
-  --text-dim: rgba(0,0,0,0.7);
-  --nav-link-color: rgba(0,0,0,0.5);
-  --input-bg: rgba(0,0,0,0.04);
-  --footer-bg: #edeae5;
-  --card-bg: #ebe8e3;
-  --card-hover: #e4e1db;
-}
 
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg); color: var(--text);
-  overflow-x: hidden; cursor: none; min-height: 100vh;
+  overflow-x: hidden; min-height: 100vh;
   transition: background 0.35s, color 0.35s;
-}
-
-/* ── CURSOR (pointer devices only) ── */
-#cur {
-  position: fixed; z-index: 9999; pointer-events: none;
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--text);
-  transform: translate(-50%, -50%);
-  transition: width .25s, height .25s, background .35s;
-  mix-blend-mode: difference;
-}
-#cur.big { width: 48px; height: 48px; }
-@media (hover: none), (pointer: coarse) {
-  #cur { display: none !important; }
-  body { cursor: auto !important; }
-}
-
-/* ── THEME TOGGLE — fixed circle bottom left ── */
-.theme-toggle {
-  position: fixed;
-  bottom: 32px; left: 32px;
-  z-index: 500;
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--text);
-  border: none;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: background 0.35s, transform 0.2s, opacity 0.2s;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-  flex-shrink: 0;
-  padding: 0;
-}
-.theme-toggle:hover { transform: scale(1.08); }
-.theme-toggle-icon {
-  font-size: 1rem;
-  line-height: 1;
-  transition: transform 0.5s;
-  /* show sun/moon as SVG-style icon */
-  display: flex; align-items: center; justify-content: center;
-}
-/* hide text label everywhere */
-.theme-toggle-label { display: none; }
-/* second toggle in mobile drawer — keep same style */
-.mob-drawer .theme-toggle {
-  position: static;
-  width: 44px; height: 44px;
-  box-shadow: none;
 }
 
 /* ── NAV ── */
@@ -97,8 +34,7 @@ nav {
   padding: 0 40px; height: 64px;
 }
 .logo { display: inline-flex; align-items: center; text-decoration: none; margin-right: 64px; flex-shrink: 0; }
-.logo img { height: 26px; width: auto; display: block; transition: filter 0.35s; }
-[data-theme="light"] .logo img { filter: invert(1); }
+.logo img { height: 26px; width: auto; display: block; }
 
 .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; flex: 1; }
 .nav-links a {
@@ -166,8 +102,7 @@ footer { background: var(--footer-bg); border-top: 1px solid var(--border); padd
   padding-bottom: 28px; border-bottom: 1px solid var(--border);
   margin-bottom: 20px;
 }
-.footer-logo img { height: 18px; width: auto; display: block; opacity: 0.55; transition: filter 0.35s; }
-[data-theme="light"] .footer-logo img { filter: invert(1); opacity: 0.5; }
+.footer-logo img { height: 18px; width: auto; display: block; opacity: 0.55; }
 .footer-email { font-size:0.82rem; color:var(--text-dim); text-decoration:none; transition:color .2s; }
 .footer-email:hover { color: var(--text); }
 .footer-social { display:flex; gap:20px; flex-wrap:wrap; margin-left: auto; }
@@ -249,15 +184,6 @@ footer { background: var(--footer-bg); border-top: 1px solid var(--border); padd
     color: var(--text-muted) !important;
   }
 
-  /* ── THEME TOGGLE: always visible, bottom-right on mobile ── */
-  .theme-toggle {
-    bottom: 20px;
-    left: auto;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-  }
-
   /* ── FOOTER ── */
   footer { padding: 36px 20px 24px; }
   .footer-top { flex-direction: column; align-items: flex-start; gap: 14px; padding-bottom: 20px; }
@@ -301,10 +227,7 @@ footer { background: var(--footer-bg); border-top: 1px solid var(--border); padd
 
 /* ── Better tap highlight ── */
 a, button { -webkit-tap-highlight-color: rgba(255,255,255,0.08); }
-[data-theme="light"] a,
-[data-theme="light"] button { -webkit-tap-highlight-color: rgba(0,0,0,0.06); }
 
 /* ── AVAIL BADGE LINK ── */
 a.avail-badge--link { text-decoration: none; }
 a.avail-badge--link:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.3); color: var(--text); }
-[data-theme="light"] a.avail-badge--link:hover { background: rgba(0,0,0,0.08); border-color: rgba(0,0,0,0.25); }

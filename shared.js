@@ -1,19 +1,3 @@
-// ── CURSOR (pointer devices only) ──
-const cur = document.getElementById('cur');
-if (cur && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-  document.addEventListener('mousemove', e => {
-    cur.style.left = e.clientX + 'px';
-    cur.style.top = e.clientY + 'px';
-  });
-  document.querySelectorAll('a, button, .work-item, .service-card, .service-group, .project-row, input, textarea').forEach(el => {
-    el.addEventListener('mouseenter', () => cur.classList.add('big'));
-    el.addEventListener('mouseleave', () => cur.classList.remove('big'));
-  });
-} else if (cur) {
-  cur.style.display = 'none';
-  document.body.style.cursor = 'auto';
-}
-
 // ── CLOCK (GMT) ──
 function updateClock() {
   const el = document.getElementById('clock');
@@ -34,27 +18,6 @@ function updateClock() {
 }
 updateClock();
 setInterval(updateClock, 10000);
-
-// ── THEME TOGGLE ──
-const THEME_KEY = 'webature_theme';
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem(THEME_KEY, theme);
-  // Update all toggle icons on the page
-  document.querySelectorAll('.theme-toggle-icon').forEach(icon => {
-    icon.textContent = theme === 'light' ? '☀️' : '🌙';
-  });
-}
-// Load saved theme
-const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
-applyTheme(savedTheme);
-
-document.querySelectorAll('.theme-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
-    applyTheme(current === 'dark' ? 'light' : 'dark');
-  });
-});
 
 // ── MOBILE MENU ──
 const mobBtn = document.querySelector('.mob-menu-btn');
