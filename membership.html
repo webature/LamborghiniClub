@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership - Lamborghini Club UK</title>
+  <!-- SEO -->
+  <meta name="description" content="Apply for membership at Lamborghini Club UK. Join our exclusive community of owners and enthusiasts.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lamborghiniclub.co.uk/membership">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* NAV — Solid black for standard pages without full-bleed image heroes */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: #000;
+  border-bottom: 1px solid var(--border);
+}
+.nav-links a { font-size: 1rem; }
+
+/* AVAIL BADGE LINK */
+.member-login-link {
+  font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500;
+  color: #000; background: #fff; text-decoration: none; white-space: nowrap;
+  border: 1px solid #fff; border-radius: 100px; padding: 9px 20px;
+  transition: opacity .3s ease;
+}
+.member-login-link:hover { opacity: 0.85; }
+
+/* MEMBERSHIP HERO (Minimalist layout) */
+.membership-page { 
+  position: relative; 
+  width: 100vw; 
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 140px 40px 100px; 
+  background: var(--bg);
+}
+
+.membership-content {
+  max-width: 580px; /* Keeps text narrow and elegant like the reference image */
+  margin: 0 auto;
+}
+
+.membership-heading { 
+  font-size: clamp(2rem, 4vw, 3rem); 
+  font-weight: 300; 
+  line-height: 1.1; 
+  letter-spacing: 0.1em; 
+  text-transform: uppercase;
+  color: var(--text); 
+  margin-bottom: 40px;
+}
+
+.membership-text { 
+  font-size: 1rem; 
+  font-weight: 300; 
+  line-height: 1.8; 
+  color: var(--text-muted); 
+  margin-bottom: 24px;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-top: 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 14px 40px;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.apply-btn:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* FOOTER */
+footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--border); }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 36px; position: static; order: 1; }
+.footer-links a { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #fff; text-decoration: none; transition: opacity .2s; }
+.footer-links a:hover { opacity: 0.6; }
+.footer-social { display: flex; align-items: center; gap: 14px; position: static; float: none; order: 2; margin: 0; }
+.footer-social a { width: 34px; height: 34px; border-radius: 50%; background: #fff; color: #000; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: opacity .2s; }
+.footer-social a:hover { opacity: 0.75; }
+.footer-legal-text { display: flex; flex-direction: column; gap: 6px; max-width: 640px; position: static; order: 3; }
+.footer-legal-text p { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; line-height: 1.6; color: rgba(255,255,255,0.4); margin: 0; }
+.footer-legal-text a { color: rgba(255,255,255,0.4); text-decoration: underline; text-underline-offset: 2px; transition: color .2s; }
+.footer-legal-text a:hover { color: #fff; }
+
+/* MOBILE OVERHAUL */
+@media (max-width: 640px) {
+  .member-login-link { display: none; }
+  .membership-page { padding: 120px 20px 80px; }
+  .membership-heading { font-size: clamp(1.8rem, 8vw, 2.4rem); margin-bottom: 32px; }
+  .membership-text { font-size: 0.95rem; }
+  footer { padding: 48px 20px 32px; }
+  .footer-links { gap: 14px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><img src="lamborghiniclub-logo.png" alt="Lamborghini Club UK"></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/events">Events</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="member-login-link">Member Login</a>
+    <button class="mob-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-drawer">
+  <a href="/membership" class="mob-drawer-link">Membership</a>
+  <a href="/events" class="mob-drawer-link">Events</a>
+  <a href="/about" class="mob-drawer-link">About</a>
+  <a href="/contact" class="mob-drawer-link">Contact</a>
+  <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="mob-drawer-link">Member Login</a>
+</div>
+
+<section class="membership-page">
+  <div class="membership-content">
+    <h1 class="membership-heading">Welcome to The Club</h1>
+    
+    <p class="membership-text">
+      Membership at Lamborghini Club UK welcomes you not only to our home but also to our community.
+    </p>
+    
+    <p class="membership-text">
+      We welcome you to apply below.
+    </p>
+
+    <a href="https://crossmember.co.uk/add-member/?club=lcuk" class="apply-btn">Apply</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/terms">Terms &amp; Conditions</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/lamboclubuk" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/lamborghiniclubuk" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-7.9h2.66l.4-3.09h-3.06V8.04c0-.9.25-1.5 1.54-1.5h1.64V3.77C16.47 3.68 15.5 3.6 14.38 3.6c-2.34 0-3.94 1.43-3.94 4.05v2.36H7.77v3.09h2.67V21h3.06z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCsM-XljXUnVzyZMReUy9eUQ" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="5"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+    <div class="footer-legal-text">
+      <p>Copyright © 2026 Lamborghini Club UK. All Rights Reserved.</p>
+      <p>Lamborghini Club UK is an independent club for Lamborghini owners and enthusiasts. It has no connection to or association with Automobili Lamborghini S.p.A.</p>
+      <p>Website by <a href="https://webature.co.uk" target="_blank" rel="noopener">Webature</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>
