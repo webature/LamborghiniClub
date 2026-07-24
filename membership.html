@@ -237,90 +237,57 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
     <a href="https://crossmember.co.uk/add-member/?club=lcuk" class="apply-btn">Apply</a>
   </div>
 </section>
-/* MEMBERSHIP BENEFITS */
-.membership-benefits {
-  background: var(--bg);
-  padding: 0 40px 120px;
-}
+  <section class="membership-benefits">
+  <div class="benefits-inner">
+    <h2 class="benefits-header">Membership Privileges</h2>
+    
+    <div class="benefits-grid">
+      <!-- Group 1 -->
+      <div class="benefit-group">
+        <h3 class="benefit-title">Events & Experiences</h3>
+        <ul class="benefit-list">
+          <li>Invitations to exclusive Club events, including Car of the Year, road trips, and special weekends.</li>
+          <li>Meet with fellow owners and enthusiasts at a variety of UK and European events, ranging from static displays to driving trips and track days.</li>
+          <li>Invitations to exclusive Automobili Lamborghini events.</li>
+          <li>Hospitality at official club events, including exclusive use of the Club hospitality trailer.</li>
+        </ul>
+      </div>
 
-.benefits-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-top: 1px solid var(--border);
-  padding-top: 80px;
-}
+      <!-- Group 2 -->
+      <div class="benefit-group">
+        <h3 class="benefit-title">Community & Network</h3>
+        <ul class="benefit-list">
+          <li>Invaluable opportunities to network, sharing experiences and technical knowledge.</li>
+          <li>Option to join dedicated WhatsApp groups, organized by model range or across our eight UK regions.</li>
+          <li>Access to a vast library of technical information and shared knowledge.</li>
+        </ul>
+      </div>
 
-.benefits-header {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text);
-  margin-bottom: 60px;
-  text-align: center;
-}
+      <!-- Group 3 -->
+      <div class="benefit-group">
+        <h3 class="benefit-title">Publications & Gifts</h3>
+        <ul class="benefit-list">
+          <li>Welcome pack upon joining.</li>
+          <li>Free copy of the Club’s quarterly full-colour newsletter, <em>Rivista Veloce</em>.</li>
+          <li>Free copy of the Club’s full-colour annual calendar.</li>
+          <li>Regular email news bulletins keeping you up to date.</li>
+          <li>Access to official Automobili Lamborghini clothing and merchandise at various events.</li>
+        </ul>
+      </div>
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px 80px;
-}
-
-.benefit-group {
-  border-top: 1px solid var(--border-mid);
-  padding-top: 24px;
-}
-
-.benefit-title {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text);
-  margin-bottom: 24px;
-}
-
-.benefit-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.benefit-list li {
-  font-size: 0.9rem;
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--text-muted);
-  position: relative;
-  padding-left: 16px;
-}
-
-.benefit-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 9px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--text-faint);
-}
-
-/* MOBILE ADJUSTMENTS FOR BENEFITS */
-@media (max-width: 900px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-@media (max-width: 640px) {
-  .membership-benefits { padding: 0 20px 80px; }
-  .benefits-inner { padding-top: 60px; }
-  .benefits-header { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 40px; }
-}
+      <!-- Group 4 -->
+      <div class="benefit-group">
+        <h3 class="benefit-title">Support & Savings</h3>
+        <ul class="benefit-list">
+          <li>Access to the Club’s unique insurance scheme with Lockton.</li>
+          <li>Free insurance valuation letter and free documentation when bringing a Lamborghini into the UK for the first time.</li>
+          <li>Exclusive member discounts with official UK dealers for servicing, parts, and merchandise.</li>
+          <li>Preferred rates with various trusted partner suppliers for a variety of items and services.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="footer-inner">
     <div class="footer-links">
