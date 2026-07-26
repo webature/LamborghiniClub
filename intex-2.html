@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Central London Vacation Rentals with a friendly Concierge Service</title>
+<meta name="description" content="London vacation rentals for all budgets in Belgravia, Knightsbridge, Kensington, Chelsea, Notting Hill, and other parts of central London.">
+<link rel="canonical" href="https://chsrentals.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Central London Vacation Rentals with a friendly Concierge Service">
+<meta property="og:description" content="London vacation rentals for all budgets in Belgravia, Knightsbridge, Kensington, Chelsea, Notting Hill, and other parts of central London.">
+<meta property="og:url" content="https://chsrentals.com/">
+<meta property="og:site_name" content="CHS Rentals">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Prime Property Rentals",
+  "url": "https://chsrentals.com/",
+  "logo": "https://chsrentals.com/wp-content/uploads/2017/11/lantern.jpg",
+  "sameAs": ["https://www.facebook.com/CHSRentals", "https://x.com/chsrentals"]
+}
+</script>
+
+<link rel="icon" href="https://chsrentals.com/wp-content/uploads/2023/11/cropped-favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://chsrentals.com/wp-content/uploads/2023/11/cropped-favicon-180x180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#11498a;
+  --navy-dark:#0c3a70;
+  --ink:#242424;
+  --ink-soft:#5d7380;
+  --border:#e2e5e8;
+  --bg-alt:#f7f8f9;
+  --radius:10px;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Open Sans',sans-serif;color:var(--ink);line-height:1.6;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+/* NAV */
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:100;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;}
+.nav-inner img{height:40px;width:auto;}
+nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;font-size:0.92rem;font-weight:600;}
+nav ul a{text-decoration:none;}
+nav ul a:hover{color:var(--navy);}
+.nav-cta{background:var(--navy);color:#fff;padding:9px 18px;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.85rem;white-space:nowrap;}
+.nav-cta:hover{background:var(--navy-dark);}
+.burger{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;}
+@media (max-width:820px){
+  nav.primary{display:none;}
+  .burger{display:block;}
+}
+
+/* HERO */
+.hero{background:var(--bg-alt);padding:72px 24px;text-align:center;border-bottom:1px solid var(--border);}
+.hero h1{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px;}
+.hero h2{font-size:clamp(1.1rem,2.4vw,1.4rem);font-weight:600;color:var(--navy);margin:0;}
+
+/* ABOUT */
+.about{padding:72px 24px;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.about h2{font-size:1.9rem;margin-top:0;}
+.about h4{color:var(--ink-soft);font-weight:600;margin-top:-8px;}
+.about p{color:#3a3a3a;}
+.about img{border-radius:var(--radius);border:1px solid var(--border);}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr;}}
+
+/* BENEFITS */
+.benefits{background:var(--bg-alt);padding:56px 24px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.benefits h3{text-align:center;margin-top:0;}
+.benefits ul{list-style:none;margin:32px auto 0;padding:0;max-width:900px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px 28px;}
+.benefits li{display:flex;align-items:center;gap:10px;font-size:0.92rem;}
+.benefits li::before{content:"✓";color:var(--navy);font-weight:700;}
+@media (max-width:700px){.benefits ul{grid-template-columns:1fr 1fr;}}
+
+/* PROPERTIES */
+.properties{padding:72px 24px;}
+.properties h2{text-align:center;margin-bottom:40px;}
+.property-grid{display:grid;gap:28px;grid-template-columns:repeat(3,1fr);}
+@media (max-width:900px){.property-grid{grid-template-columns:1fr;}}
+.card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;}
+.card img{aspect-ratio:4/3;object-fit:cover;}
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.card-body h3{margin:0 0 4px;font-size:1.15rem;}
+.price{color:var(--navy);font-weight:700;margin:0 0 10px;}
+.card-body p{font-size:0.88rem;color:#4a4a4a;flex:1;}
+.facts{display:flex;gap:16px;font-size:0.82rem;color:var(--ink-soft);margin:10px 0 16px;}
+.card-cta{display:inline-block;text-align:center;background:var(--navy);color:#fff;text-decoration:none;padding:10px;border-radius:6px;font-weight:600;font-size:0.88rem;}
+.card-cta:hover{background:var(--navy-dark);}
+
+/* TESTIMONIAL */
+.testimonial{background:var(--navy);color:#fff;padding:56px 24px;text-align:center;}
+.testimonial blockquote{max-width:680px;margin:0 auto;font-size:1.15rem;font-style:italic;}
+.testimonial cite{display:block;margin-top:18px;font-style:normal;font-weight:600;font-size:0.9rem;opacity:0.85;}
+
+/* NEWSLETTER (static stub — wire action to your email provider) */
+.newsletter{padding:56px 24px;text-align:center;border-bottom:1px solid var(--border);}
+.newsletter form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px;}
+.newsletter input[type=email]{padding:11px 14px;border:1px solid var(--border);border-radius:6px;font-family:inherit;min-width:260px;}
+.newsletter button{background:var(--navy);color:#fff;border:0;padding:11px 22px;border-radius:6px;font-weight:600;cursor:pointer;}
+.newsletter button:hover{background:var(--navy-dark);}
+
+/* FOOTER */
+footer{background:#101418;color:#c7cdd3;padding:56px 24px 28px;}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;max-width:1180px;margin:0 auto;}
+.footer-grid h6{color:#fff;font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 14px;}
+.footer-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:0.9rem;}
+.footer-grid ul a:hover{color:#fff;}
+.social{display:flex;gap:14px;margin-top:16px;}
+.social a{color:#c7cdd3;}
+.social a:hover{color:#fff;}
+.footer-bottom{max-width:1180px;margin:40px auto 0;padding-top:20px;border-top:1px solid #2a2f35;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;color:#8b929a;}
+@media (max-width:820px){.footer-grid{grid-template-columns:1fr;}}
+
+/* COOKIE BAR — vanilla JS, no plugin/backend needed */
+#cookie-bar{position:fixed;left:0;right:0;bottom:0;background:#101418;color:#fff;padding:16px 24px;display:none;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;z-index:200;font-size:0.85rem;}
+#cookie-bar button{background:var(--navy);color:#fff;border:0;padding:9px 18px;border-radius:6px;font-weight:600;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="/"><img src="https://chsrentals.com/wp-content/uploads/2023/11/cropped-cropped-logo-1.png" alt="Prime Property Rentals"></a>
+    <nav class="primary">
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/faq/">How to book</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/properties-london/">London</a></li>
+        <li><a href="/newsletter/">Newsletter</a></li>
+        <li><a href="/my-account/">My Account</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="/owners/">List your Property</a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('nav.primary').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Find a London vacation rental</h1>
+  <h2>from £150 per night</h2>
+</section>
+
+<section class="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>Prime Property Rentals</h2>
+      <h4>Looking after our guests since 2014</h4>
+      <p>Since 2014 Prime Property Rentals has been solving short-stay accommodation problems for visitors from all over the world seeking London vacation rentals.</p>
+      <p>With some 15 hand-picked London holiday rental properties and the services of our experienced reservation team to help you choose what's right for you — we take the hassle and frustration out of choosing and booking your ideal London holiday apartment.</p>
+      <p>And the service doesn't end after you've booked: we'll help arrange airport collection, greet you on arrival, hand over the keys, explain how everything works, and answer any questions. A 24/7 help line is there if you need it. <strong>You don't get that with the mass-market listing sites!</strong></p>
+      <p>For parties of up to 5 people we also offer unique self-catering accommodation in <a href="https://thecoachhouselondon.com/" target="_blank" rel="noopener">The Coach House</a>, a charming little cottage in south London, just 20 minutes by tube from the centre.</p>
+    </div>
+    <div>
+      <img src="https://chsrentals.com/wp-content/uploads/2023/11/2ennrgyi.bmp" alt="Prime Property Rentals">
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap">
+    <h3>Benefits</h3>
+    <ul>
+      <li>Hand-picked real homes</li>
+      <li>Real people to help you choose</li>
+      <li>Safe and secure booking process</li>
+      <li>Excellent value for money</li>
+      <li>Many 1,000s of happy guests</li>
+      <li>Great central locations</li>
+      <li>Airport pickup</li>
+      <li>Met on arrival</li>
+      <li>Free mini guide</li>
+      <li>24 hour telephone helpline</li>
+      <li>Personal service</li>
+      <li>Ready for immediate occupation</li>
+      <li>Towels and linens provided</li>
+      <li>Minimum length stay of 5 not 7 nights</li>
+    </ul>
+  </div>
+</section>
+
+<section class="properties">
+  <div class="wrap">
+    <h2>Featured Apartments in London</h2>
+    <div class="property-grid">
+
+      <div class="card">
+        <img src="https://chsrentals.com/wp-content/uploads/2014/09/chtr-wysteria.jpg" alt="The Coach House">
+        <div class="card-body">
+          <h3>The Coach House (Ref: CHTR)</h3>
+          <p class="price">From £150.00</p>
+          <p>London self-catering accommodation with a difference — exclusive use, private entrance, two bedrooms, two bathrooms, and a kitchen. Great neighbourhood with many good local pubs.</p>
+          <div class="facts"><span>2 bed</span><span>2 bath</span><span>5 guests</span></div>
+          <a class="card-cta" href="https://chsrentals.com/shop/properties/the-coach-house/">View more about this property</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://chsrentals.com/wp-content/uploads/2023/11/LSS4-living1-600x479-1.jpg" alt="Lower Sloane Street 4">
+        <div class="card-body">
+          <h3>Lower Sloane Street 4 (Ref: LSS4)</h3>
+          <p class="price">From £265.00</p>
+          <p>Spacious quality apartment in a beautiful red-brick Georgian house overlooking Sloane Gardens — just off Sloane Square, two minutes from the King's Road, a 15-minute walk from Knightsbridge and Harrods.</p>
+          <div class="facts"><span>1 bed</span><span>1 bath</span><span>4 guests</span></div>
+          <a class="card-cta" href="https://chsrentals.com/shop/properties/lower-sloane-street-4/">View more about this property</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://chsrentals.com/wp-content/uploads/2023/11/dining-living.jpg" alt="The Ridgeway">
+        <div class="card-body">
+          <h3>The Ridgeway (RDG)</h3>
+          <p class="price">From £270.00</p>
+          <p>Excellent value ground-floor apartment in Wimbledon, close to Wimbledon village and the Common, with easy tube and bus links into central London. Parking can be arranged.</p>
+          <div class="facts"><span>3 bed</span><span>2 bath</span><span>5 guests</span></div>
+          <a class="card-cta" href="https://chsrentals.com/shop/properties/the-ridgeway/">View more about this property</a>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:32px;color:var(--ink-soft);font-size:0.9rem;">
+      Showing 3 of 15 properties — the original site paginates the rest via WooCommerce's "Load More". A fully static version needs either all properties listed here, or a link through to the live catalogue.
+    </p>
+  </div>
+</section>
+
+<section class="testimonial">
+  <blockquote>
+    "Our rental was perfect and exactly what we wanted. The Prime Property Rentals staff were friendly and efficient. We would have no hesitation in using their services again."
+    <cite>Martina Navratilova — Former Female Tennis World No. 1</cite>
+  </blockquote>
+</section>
+
+<!-- Static stand-in for the popup newsletter form. Point the action at your
+     provider (Mailchimp, Formspree, ConvertKit, etc.) — this cannot submit
+     anywhere on its own. -->
+<section class="newsletter">
+  <div class="wrap">
+    <h3>Stay in the loop</h3>
+    <p>Sign up to our newsletter to receive updates and offers about our properties.</p>
+    <form action="#" method="post">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="https://chsrentals.com/wp-content/uploads/2023/11/cropped-cropped-logo-1.png" alt="Prime Property Rentals" style="height:36px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);">
+      <div class="social">
+        <a href="https://www.facebook.com/CHSRentals" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/chsrentals" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://uk.pinterest.com/chsrentals/" target="_blank" rel="noopener">Pinterest</a>
+      </div>
+    </div>
+    <div>
+      <h6>Information</h6>
+      <ul>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/my-account/">My Account</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Get In Touch</h6>
+      <ul>
+        <li>+44 (0)XX XXXX XXXX</li>
+        <li><a href="mailto:contact@pprentals.com">contact@pprentals.com</a></li>
+        <li><a href="/london/contact/">Contact Form</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Prime Property Rentals 2026. All rights reserved.</span>
+    <span>Website by <a href="https://webature.co.uk" target="_blank" rel="noopener">Webature</a></span>
+  </div>
+</footer>
+
+<div id="cookie-bar">
+  <span>We use cookies to give you the best experience on our website.</span>
+  <div style="display:flex;gap:10px;">
+    <button onclick="setCookieConsent(false)" style="background:transparent;border:1px solid #fff;">Reject</button>
+    <button onclick="setCookieConsent(true)">Accept</button>
+  </div>
+</div>
+
+<script>
+// Mobile nav toggle
+document.querySelectorAll('nav.primary').forEach(n => {});
+
+// Lightweight static cookie consent — no plugin/backend required.
+function setCookieConsent(accepted){
+  localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+  document.getElementById('cookie-bar').style.display = 'none';
+  // If accepted, this is where you'd conditionally load analytics, e.g.:
+  // if (accepted) { loadAnalytics(); }
+}
+if (!localStorage.getItem('cookie_consent')) {
+  document.getElementById('cookie-bar').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>
