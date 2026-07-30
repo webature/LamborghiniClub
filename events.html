@@ -73,7 +73,7 @@ nav {
 }
 .timeline-progress {
   position: absolute;
-  left: 0; top: 0;
+  left: 5px; top: 6px;
   width: 1px;
   height: 0;
   background: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.08));
@@ -141,12 +141,28 @@ nav {
   .timeline-progress { transition: none; }
 }
 
+/* FOOTER */
+footer { background:#000; padding:64px 40px 40px; border-top:1px solid var(--border); }
+.footer-inner { max-width:1400px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:28px; text-align:center; }
+.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 36px; }
+.footer-links a { font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#fff; text-decoration:none; transition:opacity .2s; }
+.footer-links a:hover { opacity:0.6; }
+.footer-social { display:flex; align-items:center; gap:14px; }
+.footer-social a { width:34px; height:34px; border-radius:50%; background:#fff; color:#000; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:opacity .2s; }
+.footer-social a:hover { opacity:0.75; }
+.footer-legal-text { display:flex; flex-direction:column; gap:6px; max-width:640px; }
+.footer-legal-text p { font-family:'DM Sans',sans-serif; font-size:0.72rem; line-height:1.6; color:rgba(255,255,255,0.4); margin:0; }
+.footer-legal-text a { color:rgba(255,255,255,0.4); text-decoration:underline; text-underline-offset:2px; transition:color .2s; }
+.footer-legal-text a:hover { color:#fff; }
+
 @media (max-width: 640px) {
   .page-header { padding: 140px 20px 56px; }
   .season-key { padding: 24px 20px 0; gap: 20px; }
   .timeline-section { padding: 40px 20px 100px; }
   .timeline-item { padding-left: 32px; padding-bottom: 36px; }
   .timeline-title { font-size: 1.02rem; }
+  footer { padding: 48px 20px 32px; }
+  .footer-links { gap: 14px 24px; }
 }
 </style>
 </head>
