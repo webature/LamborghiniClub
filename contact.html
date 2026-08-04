@@ -77,41 +77,52 @@ nav {
 
 .committee-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 28px;
 }
 
 .committee-card {
-  background: var(--bg);
-  padding: 40px 32px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+}
+
+.committee-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.committee-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .committee-name {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--text);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .committee-role {
   font-size: 0.78rem;
   font-weight: 300;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: var(--text-faint);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .committee-detail {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .committee-detail a {
@@ -123,10 +134,6 @@ nav {
 
 .committee-detail a:hover {
   color: var(--text);
-}
-
-.committee-detail.plain {
-  color: var(--text-faint);
 }
 
 /* FOOTER */
@@ -145,15 +152,14 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
 
 /* MOBILE OVERHAUL */
 @media (max-width: 900px) {
-  .committee-grid { grid-template-columns: repeat(2, 1fr); }
+  .committee-grid { grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
 }
 @media (max-width: 640px) {
   .member-login-link { display: none; }
   .contact-hero { padding: 120px 20px 30px; }
   .committee-section { padding: 0 20px 80px; }
   .committee-inner { padding-top: 60px; }
-  .committee-grid { grid-template-columns: 1fr; }
-  .committee-card { padding: 32px 24px; }
+  .committee-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }
   footer { padding: 48px 20px 32px; }
   .footer-links { gap: 14px 24px; }
 }
@@ -199,6 +205,7 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
     <div class="committee-grid">
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/alan-robb.jpg" alt="Alan Robb" onerror="this.remove()"></div>
         <div class="committee-name">Alan Robb</div>
         <div class="committee-role">Chairman &amp; Social Media</div>
         <div class="committee-detail"><a href="mailto:chair@lamborghiniclub.co.uk">chair@lamborghiniclub.co.uk</a></div>
@@ -206,6 +213,7 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/geoff-armstrong.jpg" alt="Geoff Armstrong" onerror="this.remove()"></div>
         <div class="committee-name">Geoff Armstrong</div>
         <div class="committee-role">Vice Chair &amp; Company Secretary</div>
         <div class="committee-detail"><a href="mailto:clubsecretary@lamborghiniclub.co.uk">clubsecretary@lamborghiniclub.co.uk</a></div>
@@ -213,6 +221,7 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/judith-standen.jpg" alt="Judith Standen" onerror="this.remove()"></div>
         <div class="committee-name">Judith Standen</div>
         <div class="committee-role">Membership Secretary</div>
         <div class="committee-detail"><a href="mailto:membership@lamborghiniclub.co.uk">membership@lamborghiniclub.co.uk</a></div>
@@ -220,17 +229,20 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/del-hopkins.jpg" alt="Del Hopkins" onerror="this.remove()"></div>
         <div class="committee-name">Del Hopkins</div>
         <div class="committee-role">Technical Assistance &ndash; Lamborghini Cars</div>
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/harjit-singh.jpg" alt="Harjit Singh" onerror="this.remove()"></div>
         <div class="committee-name">Harjit Singh</div>
         <div class="committee-role">Treasurer</div>
         <div class="committee-detail"><a href="mailto:treasurer@lamborghiniclub.co.uk">treasurer@lamborghiniclub.co.uk</a></div>
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/david-morris.jpg" alt="David Morris" onerror="this.remove()"></div>
         <div class="committee-name">David Morris</div>
         <div class="committee-role">Events Co-ordinator</div>
         <div class="committee-detail"><a href="mailto:events@lamborghiniclub.co.uk">events@lamborghiniclub.co.uk</a></div>
@@ -238,6 +250,7 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/ciro-ciampi.jpg" alt="Ciro Ciampi" onerror="this.remove()"></div>
         <div class="committee-name">Ciro Ciampi</div>
         <div class="committee-role">Commercial Director</div>
         <div class="committee-detail"><a href="mailto:commercial@lamborghiniclub.co.uk">commercial@lamborghiniclub.co.uk</a></div>
@@ -245,12 +258,14 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/iain-tyrrell.jpg" alt="Iain Tyrrell" onerror="this.remove()"></div>
         <div class="committee-name">Iain Tyrrell</div>
         <div class="committee-role">Technical Officer</div>
         <div class="committee-detail"><a href="mailto:technical@lamborghiniclub.co.uk">technical@lamborghiniclub.co.uk</a></div>
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/glenn-brooks.jpg" alt="Glenn Brooks" onerror="this.remove()"></div>
         <div class="committee-name">Glenn Brooks</div>
         <div class="committee-role">Logistics Officer</div>
         <div class="committee-detail"><a href="mailto:logistics@lamborghiniclub.co.uk">logistics@lamborghiniclub.co.uk</a></div>
@@ -258,6 +273,7 @@ footer { background: #000; padding: 64px 40px 40px; border-top: 1px solid var(--
       </div>
 
       <div class="committee-card">
+        <div class="committee-photo"><img src="team/barry-standen.jpg" alt="Barry Standen" onerror="this.remove()"></div>
         <div class="committee-name">Barry Standen</div>
         <div class="committee-role">RV Editor</div>
         <div class="committee-detail"><a href="mailto:editor@lamborghiniclub.co.uk">editor@lamborghiniclub.co.uk</a></div>
