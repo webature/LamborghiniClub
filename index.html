@@ -181,25 +181,38 @@ nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opac
 @keyframes bq-forward { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 /* FOOTER */
-footer { background:#000; padding:64px 40px 40px; }
-.footer-inner { max-width:1400px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:28px; text-align:center; }
-.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 36px; position:static; order:1; }
-.footer-links a { font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#fff; text-decoration:none; transition:opacity .2s; }
-.footer-links a:hover { opacity:0.6; }
-.footer-social { display:flex; align-items:center; gap:14px; position:static; float:none; order:2; margin:0; }
-.footer-social a { width:34px; height:34px; border-radius:50%; background:#fff; color:#000; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:opacity .2s; }
-.footer-social a:hover { opacity:0.75; }
-.footer-legal-text {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    max-width: 640px;
-    width: 100%;
-    margin: 0 auto;
+.footer-inner{
+    max-width:1400px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
-.footer-legal-text p { font-family:'DM Sans',sans-serif; font-size:0.72rem; line-height:1.6; color:rgba(255,255,255,0.4); margin:0; }
-.footer-legal-text a { color:rgba(255,255,255,0.4); text-decoration:underline; text-underline-offset:2px; transition:color .2s; }
-.footer-legal-text a:hover { color:#fff; }
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:16px 36px;
+    margin-bottom:28px;
+}
+
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:28px;
+}
+
+.footer-legal-text{
+    max-width:700px;
+    text-align:center;
+}
+
+.footer-legal-text p{
+    margin:0 0 8px;
+}
 
 /* ══════════════════════════════════════
    INDEX — MOBILE OVERHAUL  ≤ 640px
@@ -365,10 +378,18 @@ footer { background:#000; padding:64px 40px 40px; }
 
 <footer>
 <div class="footer-links">
-  <a href="https://crossmember.co.uk/find-member/?club=lcuk" target="_blank" rel="noopener">Renew Membership</a>
-  <a href="https://crossmember.co.uk/my-membership/?club=lcuk" target="_blank" rel="noopener">Change Personal Details</a>
-  <a href="/terms">Terms &amp; Conditions</a>
-  <a href="/privacy">Privacy Policy</a>
+    <a href="https://crossmember.co.uk/find-member/?club=lcuk" target="_blank" rel="noopener">Renew Membership</a>
+    <a href="https://crossmember.co.uk/my-membership/?club=lcuk" target="_blank" rel="noopener">Change Personal Details</a>
+    <a href="/terms">Terms &amp; Conditions</a>
+    <a href="/privacy">Privacy Policy</a>
+</div>
+
+<div class="footer-social">
+    ...
+</div>
+
+<div class="footer-legal-text">
+    ...
 </div>
     <div class="footer-social">
       <a href="https://www.instagram.com/lamboclubuk" target="_blank" rel="noopener" aria-label="Instagram">
